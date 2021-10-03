@@ -1,4 +1,4 @@
-const HtmlResponceError = require("./error");
+const HtmlResponseError = require("./error");
 
 class Router {
     constructor(baseUrl) {
@@ -16,7 +16,7 @@ class Router {
         const { pathname, searchParams } = url;
 
         const route = this.routes.find((route) => route.pathname === pathname);
-        if (!route) throw new HtmlResponceError(404);
+        if (!route) throw new HtmlResponseError(404);
 
         const query = [...searchParams.entries()]
             .reduce((r, [name, value]) =>

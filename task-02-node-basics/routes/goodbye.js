@@ -1,15 +1,10 @@
-const HtmlResponceError = require("../error");
+const HtmlResponseError = require("../error");
 
 const routeGoodbye = (req, res, query) => {
     const { method } = req;
-    const { name, ...restParams } = query;
+    const { name } = query;
 
-    if (method !== "GET") throw new HtmlResponceError(405);
-
-    
-    const otherParams = Object.keys(restParams);
-    if (otherParams.length)
-        throw new HtmlResponceError(400, `Such params: ${otherParams} aren't allowed!`);
+    if (method !== "GET") throw new HtmlResponseError(405);
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "text/plain");
@@ -17,4 +12,4 @@ const routeGoodbye = (req, res, query) => {
     else res.end("Goodbye");
 }
 
-module.exports = routeGoodbye;
+module.exports = { routeGoodbye };
