@@ -1,4 +1,4 @@
-const HtmlResponseError = require("./error");
+const { HtmlResponseError } = require("./error");
 
 class Router {
     constructor(baseUrl) {
