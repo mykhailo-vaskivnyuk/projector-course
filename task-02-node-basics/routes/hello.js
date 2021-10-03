@@ -4,7 +4,7 @@ const routeHello = (req, res, query) => {
     const { method } = req;
     const { name } = query;
 
-    if (method !== "GET") throw new HtmlResponseError(405);
+    if (method !== "GET") throw new HtmlResponseError(404);
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "text/plain");
