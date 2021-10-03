@@ -1,4 +1,4 @@
-const HtmlResponseError = require("../error");
+const { HtmlResponseError } = require("../error");
 
 const routeHello = (req, res, query) => {
     const { method } = req;
