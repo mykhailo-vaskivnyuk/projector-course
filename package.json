@@ -1,0 +1,24 @@
+{
+  "name": "projector-course-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./task-02-node-basics/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "nodemon --inspect ./task-02-node-basics/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mykhailo-vaskivnyuk/projector-course.git"
+  },
+  "author": "Mykhailo Vaskivnyuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mykhailo-vaskivnyuk/projector-course/issues"
+  },
+  "homepage": "https://github.com/mykhailo-vaskivnyuk/projector-course#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

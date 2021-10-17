@@ -1,10 +1,10 @@
-const { HtmlResponseError } = require("../error");
+const { HttpResponseError } = require("../error");
 
 const routeGoodbye = (req, res, query) => {
     const { method } = req;
     const { name } = query;
 
-    if (method !== "GET") throw new HtmlResponseError(404);
+    if (method !== "GET") throw new HttpResponseError(404);
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "text/plain");
