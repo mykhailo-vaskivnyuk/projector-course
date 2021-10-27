@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./task-02-node-basics/server.js",
+    "dev": "nodemon ./test/file_upload/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "nodemon --inspect ./task-02-node-basics/server.js"
+    "debug": "nodemon --inspect ./test/file_upload/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,9 @@
   "homepage": "https://github.com/mykhailo-vaskivnyuk/projector-course#readme",
   "devDependencies": {
     "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.2",
+    "uuid": "^8.3.2"
   }
 }
