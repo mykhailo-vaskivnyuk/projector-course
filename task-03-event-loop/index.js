@@ -1,21 +1,14 @@
 const fs = require("fs");
+const sleep = require("../helpers/helpers");
 
-const sleep = (duration, message) => {
-    const start = Date.now();
-    let time = 0;
-    while(duration - time > 0) {
-        time = Date.now() - start;
-    }
-    console.log(message || "sleep:", time);
-}
 
 console.log("START")
 
 console.log("-", "setTimeout 1", 100);
 setTimeout(() => console.log("--", "timer 1"), 100);
 
-console.log("-", "setTimeout 2", 2005);
-setTimeout(() => console.log("--", "timer 2"), 2005);
+console.log("-", "setTimeout 2", 3005);
+setTimeout(() => console.log("--", "timer 2"), 3005);
 
 console.log("-", "setImmediate 1");
 setImmediate(() => console.log("--", "immediate 1"));
@@ -75,6 +68,7 @@ setImmediate(() => {
         console.log("---", "setImmediate 5");
         setImmediate(() => console.log("----", "immediate 5"));
     });
+    sleep(1000, "-- sleep");
 });
 
 console.log("END")
