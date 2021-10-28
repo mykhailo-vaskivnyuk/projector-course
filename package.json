@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./test/file_upload/server.js",
+    "dev": "nodemon ./task-04-events-and-streams/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "nodemon --inspect ./test/file_upload/server.js"
+    "debug": "nodemon --inspect ./task-04-events-and-streams/server.js"
   },
   "repository": {
     "type": "git",

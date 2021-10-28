@@ -1,6 +1,6 @@
 const { once } = require('events');
 const { Readable, Writable } = require('stream');
-const { consoleMethodArgs } = require('../helpers/helpers');
+const { consoleMethodArg } = require('../helpers/helpers');
 
 // class MyReadable extends Readable {
 //     constructor(opt) {
@@ -25,7 +25,7 @@ const { consoleMethodArgs } = require('../helpers/helpers');
 
 // const counter = new MyReadable({ highWaterMark: 8 });
 
-// consoleMethodArgs(counter, 'emit');
+// consoleMethodArg(counter, 'emit');
 
 // console.log('Received', counter.read().toString());
 
@@ -44,7 +44,7 @@ class MyWritable extends Writable {
 
 const counter = new MyWritable({ highWaterMark: 2 });
 
-consoleMethodArgs(counter, 'emit');
+consoleMethodArg(counter, 'emit');
 
 let i = 0;
 const times = 20;
